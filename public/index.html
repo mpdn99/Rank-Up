@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/cb733d64c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="background-main">
+      <div class="rank-up">
+        <img src="./assets/logo/Rank Up.png" alt="" />
+      </div>
+      <div class="table">
+        <div class="table-img">
+          <img src="./assets/logo/Rectangle 20 (1).png" alt="" />
+          <button><i class="fas fa-sync-alt"></i></button>
+        </div>
+        <div class="table-login">
+          <h2>JOINING ROOM: <span class="roomID"></span></h2>
+          <div class="table-input">
+            <div class="input-data">
+              <input class="inputJoin" type="text" required />
+              <label>Fill in your name </label>
+            </div>
+          </div>
+          <button class="btn-join">Join</button>
+        </div>
+      </div>
+
+      <div id="reaction-login">
+        <div class="reaction-left height-content width-left">
+          <h1>WAITING FOR NEW PLAYERS...</h1>
+          <div class="react-wait-box"></div>
+        </div>
+        <div class="reaction-right height-content width-right">
+          <div class="container">
+            <div class="chat-container">
+
+            
+          </div>
+          <form class="send-message-form">
+            <input type="text" class="chatInput" placeholder="Chat Here..." />
+            <!-- <button class="btn-input" type="submit">Send</button> -->
+          </form>
+        </div>
+      </div>
+      <!-- <div id="reaction-true">
+        <div class="reaction-left height-content width-left">
+          <div class="react-content-top">
+            <div class="react-img-main">
+              <img src="./assets/logo/Rectangle 20.png" alt="" />
+            </div>
+            <div class="react-text">
+              <h1 class="green-text">Correct!</h1>
+              <h3>Which is biggest country?</h3>
+              <p>Correct answer:</p>
+              <a href="#">Russia</a>
+            </div>
+            <div class="react-bonus green-text">
+              <p>+20</p>
+            </div>
+          </div>
+          <div class="react-content-bottom">
+            <h3>DucNghia ( #1 )</h3>
+            <p>20 points</p>
+          </div>
+          <div class="react-rank">
+            <span>1/12</span>
+          </div>
+        </div>
+        <div class="reaction-right height-content width-right">
+          <div class="container">
+            <div class="chat-container">
+              <div class="message">
+                <p>Player 1:</p>
+                <span>A Message text</span>
+              </div>
+              <div class="message">
+                <p>Player 2:</p>
+                <span>A Message text</span>
+              </div>
+            </div>
+            <form class="send-message-form">
+              <input type="text" placeholder="Chat Here..." />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div id="reaction-false">
+        <div class="reaction-left height-content width-left">
+          <div class="react-content-top">
+            <div class="react-img-main">
+              <img src="./assets/logo/Rectangle 20 (1).png" alt="" />
+            </div>
+            <div class="react-text">
+              <h1 class="red-text">Not Correct!</h1>
+              <h3>Which is biggest country?</h3>
+              <p>Correct answer:</p>
+              <a href="#">Russia</a>
+            </div>
+            <div class="react-bonus red-text">
+              <p>-20</p>
+            </div>
+            <div class="react-rank">
+              <span>1/12</span>
+            </div>
+          </div>
+          <div class="react-content-bottom">
+            <h3>DucNghia ( #1 )</h3>
+            <p>20 points</p>
+          </div>
+        </div>
+        <div class="reaction-right height-content width-right">
+          <div class="container">
+            <div class="chat-container">
+              <div class="message">
+                <p>Player 1:</p>
+                <span>A Message text</span>
+              </div>
+              <div class="message">
+                <p>Player 2:</p>
+                <span>A Message text</span>
+              </div>
+            </div>
+            <form class="send-message-form">
+              <input type="text" placeholder="Chat Here..." />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div id="reaction-congratulation">
+        <div class="reaction-left height-content width-left">
+          <div class="react-content-top">
+            <div class="react-img-main">
+              <img src="./assets/logo/Rectangle 20 (2).png" alt="" />
+            </div>
+            <div class="react-text">
+              <h1 class="green-text">Thank you for playing!</h1>
+              <h4 class="green-text">Congratulate</h4>
+              <h3>#1 Minh 165</h3>
+              <h3># Chúc 120</h3>
+              <h3>#3 Nghĩa 100</h3>
+              <a href="">To play again, please scan a new QR code! </a>
+            </div>
+          </div>
+        </div>
+        <div class="reaction-right height-content width-right">
+          <div class="container">
+            <div class="chat-container">
+              <div class="message">
+                <p>Player 1:</p>
+                <span>A Message text</span>
+              </div>
+              <div class="message">
+                <p>Player 2:</p>
+                <span>A Message text</span>
+              </div>
+            </div>
+            <form class="send-message-form">
+              <input type="text" placeholder="Chat Here..." />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div id="question">
+        <div class="reaction-left height-content width-left">
+          <div class="react-content-top">
+            <div class="react-content-top">
+              <div class="react-text">
+                <h1 class="green-text">Which is biggest country?</h1>
+                <div class="react-waitting">
+                  <p>Waiting for other players...</p>
+                  <div class="loadingio-spinner-spinner-coykykr4vp">
+                    <div class="ldio-y1ytk9xqc7i">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="react-hint">
+                  <p class="green-text">Hint: Richest country in the world</p>
+                </div>
+                <div class="react-rank">
+                  <span>1/12</span>
+                </div>
+                <div class="react-time">
+                  <span>15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="react-content-bottom">
+            <h3>DucNghia</h3>
+            <h3>DucNghia</h3>
+            <h3>DucNghia</h3>
+            <h3>DucNghia</h3>
+          </div>
+          <div class="react-content-type">
+            <form class="send-answer">
+              <p>Type your answer:</p>
+              <input type="text" placeholder="Answer..." />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="reaction-right height-content width-right">
+          <div class="container">
+            <div class="chat-container">
+              <div class="message">
+                <p>Player 1:</p>
+                <span>A Message text</span>
+              </div>
+              <div class="message">
+                <p>Player 2:</p>
+                <span>A Message text</span>
+              </div>
+            </div>
+            <form class="send-message-form">
+              <input type="text" placeholder="Chat Here..." />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+  <script type="module" src="index.js"></script>
+</html>

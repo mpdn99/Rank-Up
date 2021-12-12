@@ -4,10 +4,245 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Host Dashboard</title>
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/cb733d64c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <button>Send message "alooooo"</button>
+    <div id="background-main">
+      <div class="host-create">
+        <div class="rank-up">
+          <img src="./assets/logo/Rank Up.png" alt="" />
+        </div>
+        <button class="btn-createGame">Create Game</button>
+      </div>
+      <div id="host-main">
+        <div class="host-table height-content width-left">
+          <div class="host-left">
+            <h1>QUESTION</h1>
+            <div class="question-box">
+              <a href="#">1</a>
+              <input type="text" required placeholder="Question 1" />
+            </div>
+            <div class="question-box">
+              <a href="#">2</a>
+              <input type="text" required placeholder="Question 2" />
+            </div>
+            <div class="question-box">
+              <a href="#">3</a>
+              <input type="text" required placeholder="Question 3" />
+            </div>
+            <div class="question-box">
+              <a href="#">4</a>
+              <input type="text" required placeholder="Question 4" />
+            </div>
+            <div class="question-box-add">
+              <a href="">Add question</a>
+              <p class="btnPlay">Play now</p>
+            </div>
+          </div>
+          <div class="host-right">
+            <div class="host-right-top">
+              <h1>CONFIG QUESTION</h1>
+              <div class="host-type">
+                <div class="host-left-type">
+                  <h2>Points</h2>
+                  <span>15</span>
+                </div>
+                <div class="host-center-type">
+                  <input
+                    type="text"
+                    required
+                    placeholder="TYPING YOUR QUESTION"
+                  />
+                </div>
+                <div class="host-right-type">
+                  <h2>Points</h2>
+                  <span>15</span>
+                </div>
+              </div>
+            </div>
+            <div class="host-right-bottom">
+              <input type="text" placeholder="Type Answer 1" />
+              <input type="text" placeholder="Type Answer 2" />
+              <input type="text" placeholder="Type Answer 3" />
+              <input type="text" placeholder="Type Answer 4" />
+            </div>
+          </div>
+        </div>
+        <div id="hostInv" class="host-inv">
+          <div class="inv-left">
+            <h1>PLAYER: 0</h1>
+            <div class="react-wait-box">
+              <!-- <div class="wait-box-content">
+                <img src="./assets/img/MicrosoftTeams-image.png" alt="" />
+                <p>Tiến</p>
+              </div>
+              <div class="wait-box-content">
+                <img src="./assets/img/MicrosoftTeams-image.png" alt="" />
+                <p>Tiến</p>
+              </div>
+              <div class="wait-box-content">
+                <img src="./assets/img/MicrosoftTeams-image.png" alt="" />
+                <p>Tiến</p>
+              </div>
+              <div class="wait-box-content">
+                <img src="./assets/img/MicrosoftTeams-image.png" alt="" />
+                <p>Tiến</p>
+              </div> -->
+            </div>
+          </div>
+          <div class="inv-center">
+            <h1>INVITE</h1>
+            <p>https://</p>
+            <button>Start</button>
+          </div>
+          <div class="reaction-right height-content width-right">
+            <div class="container">
+              <div class="chat-container"></div>
+              <form class="send-message-form">
+                <input
+                  class="chatInput"
+                  type="text"
+                  placeholder="Chat Here..."
+                />
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="host-inv">
+          <div class="host-start">
+            <div class="inv-left">
+              <h1>LEADERBOARD</h1>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Tiến <br /><span>100 points</span></p>
+              </div>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Chuc <br /><span>100 points</span></p>
+              </div>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Khiem <br /><span>100 points</span></p>
+              </div>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Nghia <br /><span>100 points</span></p>
+              </div>
+            </div>
+            <div class="inv-center">
+              <div class="inv-center-top">
+                <div class="react-text">
+                  <h1>Which is not programing language?</h1>
+                </div>
+                <div class="inv-rank">
+                  <span>1/12</span>
+                </div>
+                <div class="inv-time">
+                  <span>15</span>
+                </div>
+              </div>
+              <div class="inv-center-bot">
+                <h3>DucNghia</h3>
+                <h3>DucNghia</h3>
+                <h3>DucNghia</h3>
+                <h3>DucNghia</h3>
+              </div>
+            </div>
+            <div class="inv-right reaction-right width-right">
+              <div class="container">
+                <div class="chat-container">
+                  <div class="message">
+                    <p>Player 1:</p>
+                    <span>A Message text</span>
+                  </div>
+                  <div class="message">
+                    <p>Player 2:</p>
+                    <span>A Message text</span>
+                  </div>
+                </div>
+                <form class="send-message-form">
+                  <input type="text" placeholder="Chat Here..." />
+                  <button type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="host-inv host-change">
+          <div class="host-start">
+            <div class="inv-left">
+              <h1>LEADERBOARD</h1>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Tiến <br /><span>100 points</span></p>
+              </div>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Chuc <br /><span>100 points</span></p>
+              </div>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Khiem <br /><span>100 points</span></p>
+              </div>
+              <div class="host-box-content">
+                <img src="./assets/img/9511.png_860.png" alt="" />
+                <p>Nghia <br /><span>100 points</span></p>
+              </div>
+            </div>
+            <div class="inv-center">
+              <div class="inv-center-top">
+                <div class="react-text">
+                  <h1>Which is not programing language?</h1>
+                </div>
+                <div class="inv-rank">
+                  <span>1/12</span>
+                </div>
+                <div class="inv-time">
+                  <span>15</span>
+                </div>
+              </div>
+              <div class="change-center-bot">
+                <p>The Answer True Is :</p>
+                <h3>DucNghia</h3>
+                <button>Next Question</button>
+              </div>
+            </div>
+            <div class="inv-right reaction-right width-right">
+              <div class="container">
+                <div class="chat-container">
+                  <div class="message">
+                    <p>Player 1:</p>
+                    <span>A Message text</span>
+                  </div>
+                  <div class="message">
+                    <p>Player 2:</p>
+                    <span>A Message text</span>
+                  </div>
+                </div>
+                <form class="send-message-form">
+                  <input type="text" placeholder="Chat Here..." />
+                  <button type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
   </body>
   <script type="module" src="./host.js"></script>
 </html>

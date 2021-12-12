@@ -11,7 +11,8 @@ const io = new Server(httpServer, {
   /* options */
 });
 
-let room = [{ author: "121dwere32", roomName: "9988" }];
+let room = [{ author: "121dwere32", roomName: "9988", users: [] }];
+let process = [{ room: "10CR7", questions: [], questionNumber: 0, score: [] }];
 
 io.on("connection", (socket) => {
   //Host
@@ -27,9 +28,10 @@ io.on("connection", (socket) => {
     } else {
       //create a new room
       socket.join(roomNameReq);
-      const newRoom = { author: socket.id, roomName: roomNameReq };
+      const newRoom = { author: socket.id, roomName: roomNameReq, users: [] };
       room.push(newRoom);
       socket.emit("createRoomMessage", roomNameReq);
+      console.log(room);
     }
 
     //create questions
@@ -47,18 +49,26 @@ io.on("connection", (socket) => {
 
   //Player
   socket.on("join", ({ username, roomID }) => {
-    const checkRoomID = room.filter((room) => room["roomName"] === roomID);
+    const checkRoomID = room.findIndex((room) => room["roomName"] == roomID);
 
-    if (checkRoomID.length > 0) {
-      const roomID = checkRoomID[0].roomName;
-      socket.join(roomID);
-      socket.emit("joinMessage", `connect to room id:${roomID} `);
+    if (checkRoomID > -1) {
+      const roomName = room[checkRoomID].roomName;
+      socket.join(roomName);
+      //add user to room
+
+      room[checkRoomID]["users"].push({ username, id: socket.id });
+
+      io.in(roomName).emit("joinMessage", {
+        room: room[checkRoomID].roomName,
+        data: room[checkRoomID].users,
+      });
     } else {
-      socket.emit("joinMessage", "Invalid room ID");
+      socket.emit("joinMessage", { data: "Invalid room ID" });
     }
-    // console.log(
-    //   `${username} has came with id: ${socket.id} and the room is :${roomID}`
-    // );
+  });
+
+  socket.on("sendMessage", ({ message, room, user }) => {
+    io.in(room).emit("sendMessage", { user, message });
   });
 });
 
